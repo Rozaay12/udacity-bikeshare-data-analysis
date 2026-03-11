@@ -1,4 +1,4 @@
-
+# Refactored code for better readability
 
 import os
 import time
