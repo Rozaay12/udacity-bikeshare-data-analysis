@@ -16,6 +16,10 @@ This project analyzes bikeshare data from Chicago, New York City, and Washington
 
 Run the program in the terminal and follow the prompts to select a city, month, and day for bikeshare data analysis.
 
+## Technologies
+
+Python, Git, GitHub
+
 ## Files used
 
 bikeshare.py  
