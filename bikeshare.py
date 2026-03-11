@@ -1,4 +1,5 @@
-
+# Refactored code for better readability
+# selected_city = input("Would you like to see data for Chicago, New York, or Washington?")
 
 import os
 import time
