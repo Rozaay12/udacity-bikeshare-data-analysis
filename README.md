@@ -1,190 +1,114 @@
-<h1 align="center">🚲 Bike Share Data Analysis</h1>
+# 🚲 Bike Share Data Analysis
 
-<p align="center">
-Analyzing bike-share usage patterns to uncover rider behavior, travel trends, and city-level insights using Python.
-</p>
-
-<p align="center">
+> **An interactive Python tool that lets a user explore US bike-share data (Chicago, New York City, Washington) and computes usage statistics on demand using Pandas.**
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)
-
-</p>
 
 ---
 
-# 📌 Project Overview
+## 📌 Project Overview
 
-This project explores bike-share data from multiple U.S. cities to identify trends in rider behavior, travel patterns, and trip characteristics.
+This project explores bike-share data from three US cities to identify trends in rider behavior, travel patterns, and trip characteristics. `bikeshare.py` is an interactive command-line program: the user picks a city and time filters, and the script computes and displays the relevant statistics using Pandas.
 
-The analysis was completed as part of the **Udacity Data Analyst Nanodegree** while strengthening practical data analysis skills using Python.
-
-Datasets analyzed:
-
-- Chicago
-- New York City
-- Washington
+*Completed during the Udacity Data Analyst Nanodegree (based on the Programming for Data Science project template).*
 
 ---
 
-# 🎯 Business Questions Explored
+## 🎯 Questions the Tool Answers
 
-This project answers questions such as:
-
-### Time Trends
-
-- What months have the highest ridership?
-- Which days of the week are most active?
-- What times generate peak usage?
-
-### Station Trends
-
-- Which start stations are most popular?
-- Which end stations appear most frequently?
-- Which routes occur most often?
-
-### Trip Duration
-
-- Average trip lengths
-- Longest trips
-- Overall duration patterns
-
-### User Demographics
-
-- User types
-- Gender breakdowns
-- Birth year trends
+**Time trends** — busiest months, most active days of the week, peak start hours
+**Station trends** — most popular start/end stations and most common trip routes
+**Trip duration** — total and average travel time
+**User demographics** — user-type counts, gender breakdown, and birth-year stats (where available)
 
 ---
 
-# 🛠 Tools & Skills Demonstrated
+## 🛠 Tools & Skills Demonstrated
 
-### Programming
-
-✔ Python
-
-✔ Functions
-
-✔ Conditional Logic
-
-✔ Loops
+**Python:** functions · conditional logic · loops · user input handling
+**Data analysis:** Pandas · NumPy · filtering · aggregations · descriptive statistics · EDA
 
 ---
 
-### Data Analysis
+## 📈 Key Findings
 
-✔ Pandas
+*Based on 300,000 trips per city.*
 
-✔ NumPy
+| Metric | Chicago | New York City | Washington |
+| ------ | ------- | ------------- | ---------- |
+| Busiest month | June | June | June |
+| Busiest day | Tuesday | Wednesday | Wednesday |
+| Peak hour | 5 PM | 5 PM | 8 AM |
+| Top start station | Streeter Dr & Grand Ave | Pershing Square North | Columbus Circle / Union Station |
+| Avg. trip duration | 15.6 min | 15.0 min | 20.6 min |
+| Subscriber share | 79.6% | 89.7% | 73.6% |
 
-✔ Filtering
+**What stands out:**
 
-✔ Aggregations
-
-✔ Statistical Analysis
-
-✔ Exploratory Data Analysis (EDA)
-
----
-
-### Version Control
-
-✔ Git
-
-✔ GitHub
-
----
-
-# 📈 Key Findings
-
-- Ridership activity varied significantly depending on city and time period.
-
-- Certain stations consistently appeared as high-traffic locations, indicating stronger commuter demand.
-
-- Peak usage patterns suggested differences between weekday commuting behavior and weekend usage.
-
-- User demographics showed variation among cities, highlighting differences in customer populations.
-
-- Aggregated statistics helped identify recurring travel behaviors and popular routes.
+- **June was the single busiest month in all three cities** — a clear early-summer ridership peak.
+- **Commuting patterns differ by city:** Chicago and NYC peak at **5 PM** (evening commute), while Washington peaks at **8 AM** (morning commute).
+- **Subscribers dominate everywhere**, from 73.6% in Washington to **89.7% in NYC** — these are primarily regular-rider systems, not tourist-driven.
+- **Washington riders take the longest trips** (20.6 min avg vs. ~15 min elsewhere), suggesting longer commute distances.
+- The busiest stations are transit hubs and downtown landmarks (Union Station, Pershing Square, Streeter Dr), pointing to strong commuter demand.
 
 ---
 
-# 📂 Repository Structure
+## 📊 Visualizations
 
-```text
+*Charts generated from the raw trip data (300,000 trips per city).*
+
+**Rides by month** — ridership climbs through spring and peaks in June across all three cities.
+
+![Rides by month](images/rides-by-month.png)
+
+**Rides by hour** — Chicago and NYC peak at 5 PM (evening commute), while Washington peaks at 8 AM (morning commute).
+
+![Rides by hour](images/rides-by-hour.png)
+
+**Rider composition** — subscribers dominate every city, from 74% in Washington to 90% in NYC.
+
+![Rider types by city](images/rider-types-by-city.png)
+
+---
+
+## 🚀 How To Run
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Rozaay12/udacity-bikeshare-data-analysis.git
+cd udacity-bikeshare-data-analysis
+
+# 2. Install dependencies
+pip install pandas numpy
+
+# 3. Add the data files (see note below), then run
+python bikeshare.py
+```
+
+> **Note on data:** the city CSV files (`chicago.csv`, `new_york_city.csv`, `washington.csv`) are excluded from this repo via `.gitignore` because they are large Udacity-provided datasets. Place them in the project root before running.
+
+---
+
+## 📂 Repository Structure
+
+```
 udacity-bikeshare-data-analysis/
 │
-├── data/
-│      chicago.csv
-│      new_york_city.csv
-│      washington.csv
-│
-├── src/
-│      bikeshare.py
-│
+├── bikeshare.py     # Interactive analysis script
+├── .gitignore       # Excludes large city CSV datasets
 └── README.md
 ```
 
 ---
 
-# 📁 Files Included
+## 👤 Author
 
-| File | Description |
-|------|-------------|
-| bikeshare.py | Main Python analysis script |
-| chicago.csv | Chicago bike-share dataset |
-| new_york_city.csv | NYC bike-share dataset |
-| washington.csv | Washington bike-share dataset |
+**Michael Jon-Baptiste** — Data Analyst
+SQL · Python · Pandas · Excel · Tableau · Git
 
----
-
-# 🚀 How To Run
-
-Clone repository:
-
-```bash
-git clone https://github.com/Rozaay12/udacity-bikeshare-data-analysis.git
-```
-
-Move into project:
-
-```bash
-cd udacity-bikeshare-data-analysis
-```
-
-Run:
-
-```bash
-python bikeshare.py
-```
-
----
-
-# 📊 Project Outcome
-
-This project strengthened my ability to:
-
-- Analyze structured datasets using Python
-- Write reusable analytical code
-- Interpret rider behavior from raw data
-- Present findings clearly
-- Apply exploratory data analysis techniques
-
----
-
-# 👤 Author
-
-### Michael Jon-Baptiste
-
-Aspiring Data Analyst
-
-**Skills:** SQL • Python • Excel • Pandas • Git • Tableau
-
-Currently completing the **Udacity Data Analyst Nanodegree**
-
----
+🔗 GitHub: https://github.com/Rozaay12 · LinkedIn: [FILL IN]
 
 ⭐ Continuously building projects and improving analytical skills.
