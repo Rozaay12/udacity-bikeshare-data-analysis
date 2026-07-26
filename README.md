@@ -109,6 +109,6 @@ udacity-bikeshare-data-analysis/
 **Michael Jon-Baptiste** — Data Analyst
 SQL · Python · Pandas · Excel · Tableau · Git
 
-🔗 GitHub: https://github.com/Rozaay12 · LinkedIn: [FILL IN]
+🔗 GitHub: https://github.com/Rozaay12 · 💼 [LinkedIn](https://www.linkedin.com/in/michael-jon-baptiste-b63001170)
 
 ⭐ Continuously building projects and improving analytical skills.
